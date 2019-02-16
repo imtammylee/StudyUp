@@ -39,7 +39,7 @@ public class EventServiceImpl implements EventService {
 			activeEvents.add(ithEvent);
 		}
 		return activeEvents;
-	}
+	} //does not get future events just gets all events
 
 	@Override
 	public List<Event> getPastEvents() {
@@ -47,7 +47,7 @@ public class EventServiceImpl implements EventService {
 		List<Event> pastEvents = new ArrayList<>();
 		
 		for (Integer key : eventData.keySet()) {
-			Event ithEvent= eventData.get(key);
+			Event ithEvent = eventData.get(key);
 			// Checks if an event date is before today, if yes, then add to the past event list.
 			if(ithEvent.getDate().before(new Date())) {
 				pastEvents.add(ithEvent);
@@ -69,7 +69,7 @@ public class EventServiceImpl implements EventService {
 		presentStudents.add(student);
 		event.setStudents(presentStudents);		
 		return DataStorage.eventData.put(eventID, event);
-	}
+	} //does not consider 2 presentStudent limit
 
 	@Override
 	public Event deleteEvent(int eventID) {		
