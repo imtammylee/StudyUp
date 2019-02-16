@@ -46,7 +46,8 @@ public class Event {
 	}
 
 	public Date getDate() {
-		return date;
+		Date retrievedDate = date;
+		return retrievedDate;
 	}
 
 	public void setDate(Date date) {
