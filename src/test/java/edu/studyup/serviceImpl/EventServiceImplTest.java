@@ -84,12 +84,6 @@ class EventServiceImplTest {
 	
 	@Test
 	void testUpdateGetPast() {	
-		//Create Student for Event 10
-		Student student = new Student();
-		student.setFirstName("Jane");
-		student.setLastName("Doe");
-		student.setEmail("JaneDoe@email.com");
-		student.setId(10);
 	
 		//Create Event2
 		Event event = new Event();
@@ -304,7 +298,6 @@ class EventServiceImplTest {
 		event.setName("Event 7");
 		Location location = new Location(0, 0);
 		event.setLocation(location);
-		List<Student> eventStudents = new ArrayList<>();
 		eventStudents.add(student);
 		DataStorage.eventData.put(event.getEventID(), event);
 		//Create Student2 for Event 7
