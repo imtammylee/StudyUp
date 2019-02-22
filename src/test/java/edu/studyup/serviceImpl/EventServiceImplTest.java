@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
+//import java.util.Map;
 import java.util.Calendar;
 
 import org.junit.jupiter.api.AfterAll;
@@ -15,7 +15,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
+//import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import edu.studyup.entity.Event;
@@ -298,7 +298,8 @@ class EventServiceImplTest {
 		event.setName("Event 7");
 		Location location = new Location(0, 0);
 		event.setLocation(location);
-		eventStudents.add(student);
+		List<Student> eventStudents = new ArrayList<>();
+		eventStudents .add(student);
 		DataStorage.eventData.put(event.getEventID(), event);
 		//Create Student2 for Event 7
 		Student student2 = new Student();
