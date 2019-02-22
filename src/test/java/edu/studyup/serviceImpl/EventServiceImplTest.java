@@ -298,6 +298,7 @@ class EventServiceImplTest {
 		event.setName("Event 7");
 		Location location = new Location(0, 0);
 		event.setLocation(location);
+
 		List<Student> eventStudents = new ArrayList<>();
 		eventStudents .add(student);
 		DataStorage.eventData.put(event.getEventID(), event);
